@@ -15,6 +15,22 @@ Your application must make use of the following libraries:
 - jsonwebtoken from npm for working with JWTs
 - jasmine from npm for testing
 
+# How to use the Api
+## setting up the project
+
+- use npm install or yarn install in the terminal to install all packages
+- use db-migrate up in the terminal to build the structure of all tables
+- use yarn start in the terminal to make nodemon start the server
+- you can also use yarn build to run the server without nodemon.
+- use postman or any similar app to make requests.
+- to create user make a post request to localhost:3000/api/users and add values to these prams in the body {userName,firstName,lastName,password}
+- to auth the user use localhost:3000/api/users/auth and pass the right userName and password to the body
+- to index make a get request to localhost:3000/api/users
+- to show make a get request to localhost:3000/api/users/${id}
+- same on products but to create you will pass these params {name,price} show and index are the same and you use path to products like this localhost:3000/api/products
+- to show in orders you make a get request to localhost:3000/api/orders/${uid} as uid is user id
+
+
 ## Steps to Completion
 
 ### 1. Plan to Meet Requirements
