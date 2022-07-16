@@ -19,7 +19,7 @@ Your application must make use of the following libraries:
 ## setting up the project
 
 - use npm install or yarn install in the terminal to install all packages
-- use db-migrate up in the terminal to build the structure of all tables
+- use npx db-migrate up in the terminal to build the structure of all tables
 - use yarn start in the terminal to make nodemon start the server
 - you can also use yarn build to run the server without nodemon.
 - use postman or any similar app to make requests.
