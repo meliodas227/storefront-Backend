@@ -37,6 +37,7 @@ These are the notes from a meeting with the frontend developer that describe wha
 #### User
 
 - id
+- userName
 - firstName
 - lastName
 - password
