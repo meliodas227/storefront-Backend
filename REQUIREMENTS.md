@@ -18,7 +18,7 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 - Index [token required]
 - Show (args: id)[token required]
-- Create (args: User)[token required]
+- Create (args: User)
 
 #### Orders
 
