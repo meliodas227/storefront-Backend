@@ -1,9 +1,9 @@
 type orders={
     id?:number;
-    quantityOfProductInOrder:number;
-    statusOfOrder:string;
     userId?:number;
     productId?:number;
+    quantityOfProductInOrder:number;
+    statusOfOrder:string;
 }
 
 export default orders;

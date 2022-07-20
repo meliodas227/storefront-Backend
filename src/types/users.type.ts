@@ -1,8 +1,8 @@
 type users={
     id?:number;
-    userName:string;
-    firstName:string;
-    lastName:string;
+    user_name:string;
+    first_name:string;
+    last_name:string;
     password:string;
 }
 

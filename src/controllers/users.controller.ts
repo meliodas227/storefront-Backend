@@ -8,8 +8,7 @@ const users = new Users();
 export const createUser = async (req:Request,res:Response,next:NextFunction)=>{
     try {
         const user = await users.create(req.body)
-        res.send("success");
-        res.send({...user});
+        res.json({messege:"success",user:{...user}});
     }catch (error){
         next(error)
     }
@@ -37,7 +36,6 @@ export const getOne = async (req:Request,res:Response,next:NextFunction)=>{
 export const auth = async (req:Request,res:Response,next:NextFunction)=>{
     try {
         const {userName,password} = req.body
-        console.log(req.body)
         const user = await users.auth(userName,password)
         const token = jwt.sign({user},config.token as unknown as string)
         if (!user){

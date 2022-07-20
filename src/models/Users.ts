@@ -11,18 +11,18 @@ class Users {
     async create(u:user):Promise<user> {
         try {
             const connection = await db.connect()
-            const sql = `insert into users (user_name,first_name,last_name,password) values ($1,$2,$3,$4) returning id,first_name,last_name`
+            const sql = `insert into users (user_name,first_name,last_name,password) values ($1,$2,$3,$4) returning id,user_name,first_name,last_name`
             const result = await connection.query(sql,[
-                u.userName,
-                u.firstName,
-                u.lastName,
+                u.user_name,
+                u.first_name,
+                u.last_name,
                 hashPass(u.password)
             ])
             connection.release()
             return result.rows[0];
         }catch (error){
             throw new Error(
-                `can't create (${u.firstName}): ${(error as Error).message}`
+                `can't create (${u.first_name}): ${(error as Error).message}`
             )
         }
     }

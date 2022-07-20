@@ -10,7 +10,8 @@
     "start": "nodemon src/server.ts",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint --fix src/**/*.ts",
-    "format": "prettier --write src/**/*.ts"
+    "format": "prettier --write src/**/*.ts",
+    "test": "SET {\"ENV\":\"NODE_ENV\"}=test && tsc && db-migrate up --env test && tsc && jasmine && db-migrate reset --env test"
   },
   "repository": {
     "type": "git",
