@@ -21,7 +21,7 @@ export default {
   pgUser: POSTGRES_USER,
   pgDB: POSTGRES_DB,
   pgPassword: POSTGRES_PASSWORD,
-  paper:BCRYPT_PASSWORD,
-  salt:SALT_ROUNDS,
-  token:TOKEN
+  paper: BCRYPT_PASSWORD,
+  salt: SALT_ROUNDS,
+  token: TOKEN,
 };

@@ -8,6 +8,4 @@ const pool = new Pool({
   port: parseInt(config.pgPort as string, 10),
 });
 
-
-
 export default pool;

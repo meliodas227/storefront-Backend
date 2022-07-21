@@ -1,7 +1,7 @@
-type products={
-    id?:number;
-    name:string;
-    price:number;
-}
+type products = {
+  id?: number;
+  name: string;
+  price: number;
+};
 
 export default products;

@@ -11,7 +11,7 @@
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint --fix src/**/*.ts",
     "format": "prettier --write src/**/*.ts",
-    "test": "SET {\"ENV\":\"NODE_ENV\"}=test && tsc && db-migrate up --env test && tsc && jasmine && db-migrate reset --env test"
+    "test": "set ENV=test&& tsc && db-migrate up --env test&& db-migrate up --env dev&& tsc && jasmine && db-migrate reset --env test"
   },
   "repository": {
     "type": "git",

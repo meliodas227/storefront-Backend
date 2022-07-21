@@ -6,8 +6,9 @@ create table order_details(
     product_id int,
     constraint fk_product_id
         foreign key(product_id)
-            references products(id),
+            references products(id) on delete cascade,
     constraint fk_user_id
         FOREIGN KEY(uid)
             REFERENCES users(id)
+                          on delete cascade
 )
