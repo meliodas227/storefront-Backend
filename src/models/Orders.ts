@@ -1,13 +1,12 @@
 import order from "../types/orders.type";
 import db from "../database";
-import product from "../types/products.type";
 import ordersType from "../types/orders.type";
 class Orders {
   async create(o: ordersType): Promise<ordersType> {
     try {
       const connection = await db.connect();
       const sql = `insert into order_details (uid,quantity_of_product,product_id) values ($1,$2,$3)`;
-      const create = await connection.query(sql, [
+      await connection.query(sql, [
         o.userId,
         o.quantity_of_product,
         o.productId,

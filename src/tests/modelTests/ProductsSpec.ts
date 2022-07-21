@@ -1,7 +1,6 @@
 import products from "../../models/Products";
 import db from "../../database";
 import productsType from "../../types/products.type";
-import Products from "../../models/Products";
 
 const Product = new products();
 

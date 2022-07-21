@@ -7,7 +7,6 @@ const address = "0.0.0.0:3000";
 app.use(express.json());
 dotenv.config();
 
-
 app.get("/", function (req: Request, res: Response) {
   res.send("Hello World!");
 });

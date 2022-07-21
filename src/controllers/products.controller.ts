@@ -3,7 +3,11 @@ import { Response, Request, NextFunction } from "express";
 
 const products = new Products();
 
-export const createProduct = async (req: Request, res: Response, next: any) => {
+export const createProduct = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   try {
     const product = await products.create(req.body);
     res.status(200);
@@ -27,7 +31,7 @@ export const index = async (
   }
 };
 
-export const show = async (req: Request, res: Response, next: any) => {
+export const show = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const product = await products.getOne(req.params.id as unknown as number);
     res.status(200);
