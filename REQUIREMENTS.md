@@ -8,21 +8,21 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 #### Products
 
-- Index
-- Show (args: product id)
-- Create (args: Product)[token required]
+- Index => /api/products [GET]
+- Show (args: product id) => /api/products/${id} [GET]
+- Create (args: Product)[token required] => /api/products [POST]
 - [OPTIONAL] Top 5 most popular products
 - [OPTIONAL] Products by category (args: product category)
 
 #### Users
 
-- Index [token required]
-- Show (args: id)[token required]
-- Create (args: User)
+- Index [token required] => /api/users [GET]
+- Show (args: id)[token required] => /api/users/${id} [GET]
+- Create (args: User) => /api/users [POST]
 
 #### Orders
 
-- Current Order by user (args: user id)[token required]
+- Current Order by user (args: user id)[token required] => /api/orders/${id} [GET]
 - [OPTIONAL] Completed Orders by user (args: user id)[token required]
 
 ## Data Shapes
