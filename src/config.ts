@@ -8,10 +8,12 @@ const {
   POSTGRES_PORT,
   POSTGRES_USER,
   POSTGRES_DB,
+  POSTGRES_DB_TEST,
   POSTGRES_PASSWORD,
   BCRYPT_PASSWORD,
   SALT_ROUNDS,
   TOKEN,
+  NODE_ENV
 } = process.env;
 
 export default {
@@ -19,7 +21,7 @@ export default {
   pgHost: POSTGRES_HOST,
   pgPort: POSTGRES_PORT,
   pgUser: POSTGRES_USER,
-  pgDB: POSTGRES_DB,
+  pgDB: NODE_ENV==='dev' ? POSTGRES_DB : POSTGRES_DB_TEST,
   pgPassword: POSTGRES_PASSWORD,
   paper: BCRYPT_PASSWORD,
   salt: SALT_ROUNDS,
